@@ -14,6 +14,12 @@ public final class Logger {
   private Logger() {
   }
 
+  public static Printer instance(String tag) {
+    Printer printer = new LoggerPrinter();
+    printer.init(tag);
+    return printer;
+  }
+
   /**
    * It is used to get the settings object in order to change settings
    *
